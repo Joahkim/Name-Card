@@ -1,0 +1,65 @@
+@use "../../styles/common.scss";
+.card {
+  display: flex;
+  align-items: center;
+  border-radius: 1em;
+  margin-bottom: 0.8em;
+  padding: 0.2em 0;
+  box-shadow: common.$makerShadow;
+  width: 100%;
+  max-width: 30rem;
+
+  .avatar {
+    width: 10em;
+    height: 10em;
+    padding: 1em;
+    margin-right: 1em;
+    margin-left: 0.5em;
+    border-radius: 50%;
+  }
+
+  .info {
+    width: 100%;
+  }
+
+  .name,
+  .company,
+  .title,
+  .email,
+  .message {
+    margin: 0;
+    font-size: 0.8rem;
+    margin-bottom: 0.2em;
+  }
+
+  .name {
+    font-size: 1.2rem;
+  }
+
+  .company {
+    margin-bottom: 1em;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 90%;
+      height: 1px;
+      background-color: common.$makerGray;
+      transform: translateY(0.5em);
+    }
+  }
+}
+
+.card.dark {
+  background-color: common.$makerBlack;
+  color: common.$makerWhite;
+}
+
+.card.light {
+  background-color: common.$makerWhite;
+  color: common.$makerBlack;
+}
+
+.card.colorful {
+  background: common.$makerColorful;
+}

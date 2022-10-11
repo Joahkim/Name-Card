@@ -1,0 +1,15 @@
+@use "../../styles/common.scss";
+
+.button {
+  background-color: common.$makerGreen;
+  color: common.$makerWhite;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.5em;
+  flex-basis: 1 1 50%;
+  font-size: 0.8rem;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
