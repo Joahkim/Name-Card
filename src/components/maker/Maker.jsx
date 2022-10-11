@@ -3,6 +3,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import "./maker.scss";
+import Editor from "../editor/Editor";
+import Preview from "../preview/Preview";
 
 const Maker = ({ authService }) => {
   const location = useLocation();
@@ -21,8 +23,12 @@ const Maker = ({ authService }) => {
     });
   });
   return (
-    <section>
+    <section className="maker">
       <Header onLogout={onLogout} />
+      <div className="container">
+        <Editor />
+        <Preview />
+      </div>
       <Footer />
     </section>
   );
