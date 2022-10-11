@@ -1,0 +1,49 @@
+@use "../../styles/common.scss";
+
+.form {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  border-top: 1px solid common.$makerBlack;
+  border-left: 1px solid common.$makerBlack;
+  margin-bottom: 1em;
+
+  .cardInput,
+  .textarea,
+  .themeSelect,
+  .fileInput {
+    font-size: 0.8rem;
+    width: 100%;
+    border: 0;
+    padding: 0.5em;
+    border-bottom: 1px solid common.$makerBlack;
+    border-right: 1px solid common.$makerBlack;
+    background-color: common.$makerWhite;
+  }
+
+  .cardInput,
+  .themeSelect {
+    flex: 1 1 30%;
+  }
+
+  .cardInput,
+  .textarea,
+  .themeSelect {
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  .textarea {
+    flex-basis: 100%;
+  }
+
+  .fileInput {
+    padding: 0;
+    flex: 1;
+  }
+  .submitButton {
+    padding: 0;
+    flex: 1;
+  }
+}

@@ -7,19 +7,59 @@ const CardEditForm = ({ card }) => {
   const { name, company, title, email, message, theme, fileName, fileURL } =
     card;
 
+  const onChange = (event) => {
+    if (event.currentTarget === null) {
+      return;
+    }
+  };
+
   const onSubmit = () => {};
   return (
     <form className="form">
-      <input className="cardInput" type="text" name="name" value={name} />
-      <input className="cardInput" type="text" name="company" value={company} />
-      <select className="themeSelect" name="theme" value={theme}>
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-        <option value="colorful">Colorful</option>
+      <input
+        className="cardInput"
+        type="text"
+        name="name"
+        value={name}
+        onChange={onChange}
+      />
+      <input
+        className="cardInput"
+        type="text"
+        name="company"
+        value={company}
+        onChange={onChange}
+      />
+      <select
+        className="themeSelect"
+        name="theme"
+        value={theme}
+        onChange={onChange}
+      >
+        <option value="light">light</option>
+        <option value="dark">dark</option>
+        <option value="colorful">colorful</option>
       </select>
-      <input className="cardInput" type="text" name="title" value={title} />
-      <input className="cardInput" type="text" name="email" value={email} />
-      <textarea className="textarea" name="message" value={message}></textarea>
+      <input
+        className="cardInput"
+        type="text"
+        name="title"
+        value={title}
+        onChange={onChange}
+      />
+      <input
+        className="cardInput"
+        type="text"
+        name="email"
+        value={email}
+        onChange={onChange}
+      />
+      <textarea
+        className="textarea"
+        name="message"
+        value={message}
+        onChange={onChange}
+      ></textarea>
       <div className="fileInput">
         <ImageFileInput />
       </div>
