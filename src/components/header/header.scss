@@ -1,0 +1,31 @@
+@use "../../styles/common.scss";
+
+.header {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 0.5em;
+  background-color: common.$makerGreen;
+
+  .logout {
+    position: absolute;
+    right: 3em;
+    top: 1em;
+    padding: 0.8em;
+    border-radius: 20%;
+    background-color: common.$makerBlack;
+    color: common.$makerWhite;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .logo {
+    width: 3em;
+  }
+
+  .title {
+    margin: 0;
+    color: common.$makerWhite;
+  }
+}

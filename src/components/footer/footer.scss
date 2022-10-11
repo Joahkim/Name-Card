@@ -1,0 +1,11 @@
+@use "../../styles/common.scss";
+
+.footer {
+  width: 100%;
+  background-color: common.$makerGreen;
+  text-align: center;
+
+  .title {
+    color: common.$makerWhite;
+  }
+}
