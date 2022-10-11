@@ -23,7 +23,9 @@ const CardEditForm = ({ card }) => {
       <div className="fileInput">
         <ImageFileInput />
       </div>
-      <Button name="Delete" onClick={onSubmit} />
+      <div className="submitButton">
+        <Button name="Delete" onClick={onSubmit} />
+      </div>
     </form>
   );
 };
