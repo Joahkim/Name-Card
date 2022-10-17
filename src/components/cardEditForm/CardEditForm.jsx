@@ -3,7 +3,7 @@ import Button from "../button/Button";
 import ImageFileInput from "../imageFileInput/ImageFileInput";
 import "./cardEditForm.scss";
 
-const CardEditForm = ({ card }) => {
+const CardEditForm = ({ card, updateCard, deleteCard }) => {
   const { name, company, title, email, message, theme, fileName, fileURL } =
     card;
 
@@ -11,9 +11,14 @@ const CardEditForm = ({ card }) => {
     if (event.currentTarget === null) {
       return;
     }
+    event.preventDefault();
+    updateCard({
+      ...card,
+      [event.currentTarget.name]: event.currentTarget.value,
+    });
   };
 
-  const onSubmit = () => {};
+  // const onSubmit = () => {};
   return (
     <form className="form">
       <input
@@ -64,7 +69,7 @@ const CardEditForm = ({ card }) => {
         <ImageFileInput />
       </div>
       <div className="submitButton">
-        <Button name="Delete" onClick={onSubmit} />
+        <Button name="Delete" onClick={() => deleteCard(card)} />
       </div>
     </form>
   );

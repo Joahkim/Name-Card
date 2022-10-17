@@ -3,12 +3,17 @@ import CardAddForm from "../cardAddForm/CardAddForm";
 import CardEditForm from "../cardEditForm/CardEditForm";
 import "./editor.scss";
 
-const Editor = ({ cards, addCard }) => {
+const Editor = ({ cards, addCard, updateCard, deleteCard }) => {
   return (
     <section className="editor">
       <h1 className="title">Card Maker</h1>
-      {cards.map((card) => (
-        <CardEditForm key={card.id} card={card} />
+      {Object.keys(cards).map((key) => (
+        <CardEditForm
+          key={key}
+          card={cards[key]}
+          updateCard={updateCard}
+          deleteCard={deleteCard}
+        />
       ))}
       <CardAddForm addCard={addCard} />
     </section>
