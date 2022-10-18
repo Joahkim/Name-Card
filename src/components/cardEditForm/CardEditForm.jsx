@@ -1,9 +1,8 @@
 import React from "react";
 import Button from "../button/Button";
-import ImageFileInput from "../imageFileInput/ImageFileInput";
 import "./cardEditForm.scss";
 
-const CardEditForm = ({ card, updateCard, deleteCard }) => {
+const CardEditForm = ({ FileInput, card, updateCard, deleteCard }) => {
   const { name, company, title, email, message, theme, fileName, fileURL } =
     card;
 
@@ -11,6 +10,7 @@ const CardEditForm = ({ card, updateCard, deleteCard }) => {
     if (event.currentTarget === null) {
       return;
     }
+
     event.preventDefault();
     updateCard({
       ...card,
@@ -18,7 +18,6 @@ const CardEditForm = ({ card, updateCard, deleteCard }) => {
     });
   };
 
-  // const onSubmit = () => {};
   return (
     <form className="form">
       <input
@@ -66,7 +65,7 @@ const CardEditForm = ({ card, updateCard, deleteCard }) => {
         onChange={onChange}
       ></textarea>
       <div className="fileInput">
-        <ImageFileInput />
+        <FileInput />
       </div>
       <div className="submitButton">
         <Button name="Delete" onClick={() => deleteCard(card)} />

@@ -6,7 +6,7 @@ import "./maker.scss";
 import Editor from "../editor/Editor";
 import Preview from "../preview/Preview";
 
-const Maker = ({ authService }) => {
+const Maker = ({ FileInput, authService }) => {
   const [cards, setCards] = useState({
     1: {
       id: 1,
@@ -82,6 +82,7 @@ const Maker = ({ authService }) => {
       <div className="container">
         <Editor
           cards={cards}
+          FileInput={FileInput}
           addCard={createOrUpdateCard}
           updateCard={createOrUpdateCard}
           deleteCard={deleteCard}

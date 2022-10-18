@@ -1,9 +1,8 @@
 import React, { useRef } from "react";
 import Button from "../button/Button";
-import ImageFileInput from "../imageFileInput/ImageFileInput";
 import "./cardAddForm.scss";
 
-const CardAddForm = ({ addCard }) => {
+const CardAddForm = ({ FileInput, addCard }) => {
   const formRef = useRef();
   const nameRef = useRef();
   const companyRef = useRef();
@@ -75,7 +74,7 @@ const CardAddForm = ({ addCard }) => {
         placeholder="Message"
       ></textarea>
       <div className="fileInput">
-        <ImageFileInput />
+        <FileInput />
       </div>
       <div className="submitButton">
         <Button name="Add" onClick={onSubmit} />

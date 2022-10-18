@@ -1,7 +1,7 @@
 import React from "react";
 import "./imageFileInput.scss";
 
-const ImageFileInput = () => {
+const ImageFileInput = ({ ImageUploader }) => {
   return <button>image</button>;
 };
 
