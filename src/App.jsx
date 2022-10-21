@@ -11,7 +11,7 @@ function App({ FileInput, authService }) {
           <Route exact path="/" element={<Login authService={authService} />} />
           <Route
             path="/maker"
-            element={<Maker authService={authService} FileInput={FileInput} />}
+            element={<Maker FileInput={FileInput} authService={authService} />}
           />
         </Routes>
       </BrowserRouter>

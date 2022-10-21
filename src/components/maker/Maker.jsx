@@ -81,8 +81,8 @@ const Maker = ({ FileInput, authService }) => {
       <Header onLogout={onLogout} />
       <div className="container">
         <Editor
-          cards={cards}
           FileInput={FileInput}
+          cards={cards}
           addCard={createOrUpdateCard}
           updateCard={createOrUpdateCard}
           deleteCard={deleteCard}
